@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+
+<robot name="robot">
+  <material name="orange">
+    <color rgba="1.0 0.5 0.2 1" />
+  </material>
+  <material name="gray">
+    <color rgba="0.2 0.2 0.2 1" />
+  </material>
+
+  <link name="base_link" />
+
+
+  <link name="velodyne" />
+  <joint name="velodyne_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="velodyne" />
+    <origin xyz="0.340 0.0 0.5" rpy="0.0 0.0 0.0"/>
+  </joint>
+
+
+  <link name="vectornav"/>
+  <joint name="vectornav_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="vectornav" />
+    <origin xyz="0.25 0.0 0.25" rpy="3.141592653 0.0 0.0" />
+  </joint>
+
+</robot>
